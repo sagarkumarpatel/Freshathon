@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="interactive-background">
+        <canvas id="dotCanvas"></canvas>
+        <div class="tech-grid"></div>
+        <div class="tech-glow"></div>
+        <!-- <div class="dragon-container">
+            <img src="dragon.png" alt="Dragon" class="dragon">
+        </div> -->
+    </div>
+    
+    <div class="container">
+        <header>
+            <div class="auth-container">
+                <button id="login-btn" class="auth-btn">Login</button>
+                <button id="logout-btn" class="auth-btn" style="display:none;">Logout</button>
+            </div>
+            <h1>🌿 Plant Disease Detector</h1>
+            <p>Upload an image or use your webcam to detect plant diseases</p>
+            <div id="model-status">Initializing...</div>
+        </header>
+
+        <div class="login-required">
+            <div class="login-prompt">
+                <h2>Please login to access the Plant Disease Detector</h2>
+                <button id="go-to-login" class="login-btn">Go to Login Page</button>
+            </div>
+        </div>
+
+        <div class="protected-content">
+            <div class="detection-options">
+                <!-- Webcam Section -->
+                <div class="option-card" id="webcam-card">
+                    <h2>Webcam Detection</h2>
+                    <div id="webcam-container" class="preview-container">
+                        <p>Webcam will appear here</p>
+                    </div>
+                    <div class="button-group">
+                        <button id="start-webcam" onclick="initWebcam()">Start Webcam</button>
+                        <button id="stop-webcam" onclick="stopWebcam()" style="display:none">Stop Webcam</button>
+                        <button id="capture-btn" onclick="captureImage()" disabled>Capture Image</button>
+                    </div>
+                    <div id="captured-container" class="preview-container" style="display:none; margin-top:1rem;">
+                        <img id="captured-image">
+                    </div>
+                </div>
+
+                <!-- Image Upload Section -->
+                <div class="option-card" id="upload-card">
+                    <h2>Image Upload</h2>
+                    <div class="preview-container">
+                        <img id="uploaded-image" style="display:none;">
+                        <p id="upload-placeholder">No image selected</p>
+                    </div>
+                    <div class="button-group">
+                        <label for="image-upload" class="file-upload-label">Choose File</label>
+                        <input type="file" id="image-upload" accept="image/*">
+                        <button id="predict-upload" onclick="predictUpload()" disabled>Analyze Image</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section">
+                <div id="label-container" class="predictions-container"></div>
+                <div id="disease-info" class="disease-info"></div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Created for Freshathon Hackathon</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.7.4/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+    <script src="background.js"></script>
+</body>
+</html>
