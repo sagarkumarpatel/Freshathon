@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Detector - Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="interactive-background">
+        <div class="dot-pattern"></div>
+        <canvas id="dotCanvas"></canvas>
+        <div class="tech-glow"></div>
+    </div>
+    
+    <div class="login-container">
+        <div class="login-card">
+            <div class="logo">
+                <h1>🌿 Plant Disease Detector</h1>
+            </div>
+            
+            <form class="login-form">
+                <div class="input-group">
+                    <input type="text" id="username" required>
+                    <label for="username">Username</label>
+                    <div class="underline"></div>
+                </div>
+                
+                <div class="input-group">
+                    <input type="password" id="password" required>
+                    <label for="password">Password</label>
+                    <div class="underline"></div>
+                </div>
+                
+                <button type="submit" class="login-btn">Login</button>
+                
+                <div class="links">
+                    <a href="#">Forgot password?</a>
+                    <a href="#">Create account</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
