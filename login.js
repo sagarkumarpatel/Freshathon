@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // For demo purposes, we'll just set logged in state
             localStorage.setItem('isLoggedIn', 'true');
             localStorage.setItem('username', username);
-            
+            //Yet to Implement
             // Redirect to main page
             window.location.href = 'index.html';
         });

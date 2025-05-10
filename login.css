@@ -48,6 +48,7 @@ body {
         var(--tech-blue) 1px,
         transparent 1px
     );
+    /* background style */
     background-size: 30px 30px;
     opacity: 0.15;
     z-index: -1;
