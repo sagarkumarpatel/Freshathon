@@ -13,8 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Please enter both username and password');
                 return;
             }
-            
-            // In a real app, you would validate with your backend here
             // For demo purposes, we'll just set logged in state
             localStorage.setItem('isLoggedIn', 'true');
             localStorage.setItem('username', username);
