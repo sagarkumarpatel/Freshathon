@@ -23,12 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = 'index.html';
         });
     }
-    
-    // Initialize background (shared with main page)
     initBackground();
 });
-
-// Shared background initialization
 function initBackground() {
-    // [Include the background initialization code from your main page]
 }
